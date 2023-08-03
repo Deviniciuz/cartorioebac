@@ -114,52 +114,64 @@ int main()
 {
 	int opcao=0; //Definindo variáveis
 	int laco=1;
+	char senhadigitada[]="a";
+	int comparacao;
 	
-	for(laco=1;laco=1;) //"FOR" é usado para repetição
-	{
-		system("cls"); //Responsável por limpar a tela
+	printf("###Cartorio da EBAC ###\n\n");
+	printf("Login de administrador!\n\nDigite a sua senha: ");
+	scanf("%s",senhadigitada);
 	
+	comparacao = strcmp(senhadigitada, "admin");
 	
-		setlocale(LC_ALL, "portuguese"); //Definindo a linguagem
-	
-		printf("###Cartório da EBAC ###\n\n"); //Inicio do menu
-		printf("Escolha a opção desejada do menu: \n\n");
-		printf("\t1 - Registrar nomes \n");
-		printf("\t2 - Consultar nomes \n");
-		printf("\t3 - Deletar nomes \n\n"); //Fim do menu
-		printf("\t4 - Sair do sistema \n\n");
-		printf("Opção: ");
-	
-		scanf("%d", &opcao); //Armazenando a escolha do usuário
-	
-		system("cls"); //Função serve para limpar a tela das mensagens anteriores
-	
-		switch(opcao) //Função serve para diminuir a quantidade de "if´s"
+	if(comparacao == 0)
+	{ 
+		system ("cls");
+		for(laco=1;laco=1;) //"FOR" é usado para repetição
 		{
-			case 1: //Não devemos esquecer que o switch sempre tem que colocar "CASE" ":" e para finalizar "break"
-			registro(); //Chamdda de funções
-			break;
-		
-			case 2:
-			consultar(); //Chamando a função CONSULTAR que criamos lá encima. Para chamar a função necessário colocar ";" ponto e virgula.
-			break;
-		
-			case 3:
-			deletar();
-			break;
 			
-			case 4:
-			printf("Obrigado por utilizar o sistema!\n");
-			return 0;
-			break;
+			setlocale(LC_ALL, "portuguese"); //Definindo a linguagem
+	
+			printf("###Cartório da EBAC ###\n\n"); //Inicio do menu
+			printf("Escolha a opção desejada do menu: \n\n");
+			printf("\t1 - Registrar nomes \n");
+			printf("\t2 - Consultar nomes \n");
+			printf("\t3 - Deletar nomes \n\n"); //Fim do menu
+			printf("\t4 - Sair do sistema \n\n");
+			printf("Opção: ");
+	
+			scanf("%d", &opcao); //Armazenando a escolha do usuário
+	
+			system("cls"); //Função serve para limpar a tela das mensagens anteriores
+	
+			switch(opcao) //Função serve para diminuir a quantidade de "if´s"
+			{
+				case 1: //Não devemos esquecer que o switch sempre tem que colocar "CASE" ":" e para finalizar "break"
+				registro(); //Chamdda de funções
+				break;
 			
-			default:
-			printf("Essa opção não está disponivel!\n");
-			system("pause");
-			break;
+				case 2:
+				consultar(); //Chamando a função CONSULTAR que criamos lá encima. Para chamar a função necessário colocar ";" ponto e virgula.
+				break;
+		
+				case 3:
+				deletar();
+				break;
+			
+				case 4:
+				printf("Obrigado por utilizar o sistema!\n");
+				return 0;
+				break;
+			
+				default:
+				printf("Essa opção não está disponivel!\n");
+				system("pause");
+				break;
+			} //fim da seleção
 		}	
 	}
 	
+	else
+		printf("Senha incorreta!");
 }
 
 
