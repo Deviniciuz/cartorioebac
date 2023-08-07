@@ -1,0 +1,86 @@
+<!DOCTYPE html> <!-- tipo de arquivo, no caso html -->
+<html lang="en"> <!-- tipo de linguagem-->
+<head>
+    <meta charset="UTF-8"> <!--entrar na linguagem universal-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--configuração para navegar em dispositivo movél-->
+    <title>I want to travel</title> <!--titulo que aparece na aba da pagina-->
+</head>
+<body>
+
+    <div> <!--usada para dividir as partes do body, sendo em titulo e subtitulo-->
+        <h1> Choose what kind of travel you like!</h1> <!--h1 serve para o tamnho da letra, varia de h1 ate h6, sendo h1 maior e h6 menor-->
+        <p><h2>Complete the form with yours informations:</h2></p> <!--tag de paragrafo-->
+        <br> <!--usado para quando for pular de linha-->
+    </div>
+
+    <form> <!--formulário que sera preenchido-->
+        <fieldset> <!--agrupador de campos-->
+            <div>
+                <label>Name</label> <!--explicação do nome-->
+                <input type="text" name="nome" id="nome"> <!--input seria a entrada de valores (informações)-->
+            </div>
+
+            <div>
+                <label>Surname</label>
+                <input type="text" name="Sobrenome" id="Sobrenome">
+            </div>
+    
+            <div>
+                <label>Email</label>
+                <input type="email" name="email" id="email">
+        </fieldset>        
+            </div>
+
+            <div>
+                <br>
+                <fieldset>
+                <label>What kind of trip do you want to do?</label>
+                <br>
+                <label>
+                    <input type="radio" name="devweb" value="frontend"checked>National
+                </label>
+                <label>
+                    <input type="radio" name="devweb" value="backend">Internacional
+                </label>
+            </fieldset>
+            </div>
+            <div>
+                <br>
+                <label>Who will you travel with?</label>
+                <br>
+                <select id="Who wiil you travel with:">
+                    <option selected desabled value="">Selected</option>
+                    <option>Alone</option>
+                    <option>Parents</option>
+                    <option>Friends</option>
+                </select>
+            </div>
+            <br>
+            <fieldset>
+                <div>
+                    <label>What kind of company you would like to travel?</label>
+                    <br>
+                    <input type="checkbox" id="tecnoligia1" name="tecnologia1" value="Any Company">
+                    <label for="tecnologia1">Any Company</label>
+                    <input type="checkbox" id="tecnoligia1" name="tecnologia1" value="AZUL">
+                    <label for="tecnologia1">AZUL</label>
+                    <input type="checkbox" id="tecnologia2" name="tecnologia2" value="GOL">
+                    <label for="tecnologia2">GOL</label>
+                    <input type="checkbox" id="tecnoligia3" name="tecnologia3" value="LATAM">
+                    <label for="tecnologia3">LATAM</label>
+                    <input type="checkbox" id="tecnologia4" name="tecnologia4" value="TAP">
+                    <label for="tecnologia4">TAP</label>
+                </div>
+            </fieldset>
+
+            <div>
+                <br>
+                <label>Write about yours preferences</label>
+                <br>
+                <textarea row="6" style="width: 26em" id="experience" name="experience"></textarea>
+            </div>
+            <button type=submit>Concluded!</button>
+    </form>
+    
+</body>
+</html>
